@@ -9,12 +9,15 @@ Set these in your hosting dashboard:
 ```env
 SECRET_KEY=make-this-long-and-random
 DJANGO_DEBUG=False
-ALLOWED_HOSTS=your-backend-domain.com
+ALLOWED_HOSTS=portfolio-backend-hpcb.onrender.com
 CORS_ALLOWED_ORIGINS=https://your-frontend-domain.com
-CSRF_TRUSTED_ORIGINS=https://your-frontend-domain.com,https://your-backend-domain.com
+CSRF_TRUSTED_ORIGINS=https://your-frontend-domain.com,https://portfolio-backend-hpcb.onrender.com
 DATABASE_URL=postgres://user:password@host:5432/database
 DB_SSL_REQUIRE=True
 ```
+
+For a custom backend domain, add it to `ALLOWED_HOSTS` and include the
+`https://` origin in `CSRF_TRUSTED_ORIGINS`.
 
 After HTTPS is working, also set:
 
