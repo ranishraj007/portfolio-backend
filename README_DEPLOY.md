@@ -41,6 +41,13 @@ Start command:
 gunicorn config.wsgi:application
 ```
 
+Render must use that exact start command. If the deploy log says
+`Running 'gunicorn app:app'`, open the Render service dashboard and replace
+the Start Command with `gunicorn config.wsgi:application`.
+
+This repo also includes `.python-version` and `render.yaml` so new Render
+Blueprint deployments use Python 3.10.12 and the correct Django WSGI command.
+
 If your platform does not run `build.sh`, use:
 
 ```bash
