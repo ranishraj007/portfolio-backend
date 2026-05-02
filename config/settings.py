@@ -105,7 +105,8 @@ elif DB_NAME:
     }
 elif not DEBUG:
     raise ImproperlyConfigured(
-        'Production deployment requires DATABASE_URL or DB_NAME database settings.'
+        'Production deployment requires DATABASE_URL. On Render, add it in '
+        'the service Environment tab or connect a Render PostgreSQL database.'
     )
 else:
     DATABASES = {

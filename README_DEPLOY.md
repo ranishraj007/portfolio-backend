@@ -16,6 +16,11 @@ DATABASE_URL=postgres://user:password@host:5432/database
 DB_SSL_REQUIRE=True
 ```
 
+Render does not read `.env.example`. In the Render dashboard, open the web
+service, go to **Environment**, and add `DATABASE_URL` there. If you created a
+Render PostgreSQL database, copy its internal database URL or use Render's
+"Add from Database" option.
+
 For a custom backend domain, add it to `ALLOWED_HOSTS` and include the
 `https://` origin in `CSRF_TRUSTED_ORIGINS`.
 
